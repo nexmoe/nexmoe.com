@@ -24,5 +24,4 @@ data-offset="24"
 ## 其他
 
 - [听音乐 - 网易云音乐](https://music.163.com/#/user/home?id=129387613)
-- [瞎拍点东西 - 图虫](https://nexmoe.tuchong.com/)
 - [看书、电影 - 豆瓣](https://www.douban.com/people/nexmoe/)
