@@ -5,3 +5,7 @@ db.json
 node_modules/
 public/
 .deploy*/
+
+themes/
+
+_config.hexo-theme-nexmoe.yml
