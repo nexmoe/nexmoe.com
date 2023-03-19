@@ -9,3 +9,6 @@ public/
 themes/
 
 _config.hexo-theme-nexmoe.yml
+
+.yalc/
+yalc.lock
