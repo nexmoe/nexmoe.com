@@ -372,6 +372,12 @@ date: 2019-02-01 20:03:41
   "link": "https://nantekoto.github.io/",
   "img": "https://nantekoto.github.io/images/bochirock/ryou.png",
   "des": "にゃんぱすー"
+ },
+ {
+  "title": "Wlcheng' Life",
+  "link": "https://wlcheng.cc",
+  "img": "https://wlcheng.cc/images/avatar.png",
+  "des": "来日方长，何惧车遥马慢"
  }
 ]
 {% endlinks %}

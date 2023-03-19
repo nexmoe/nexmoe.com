@@ -5,32 +5,6 @@ body {
 	overflow-x: hidden;
 }
 
-article ol > li {
-	line-height: 24px;
-}
-
-article ul li {
-	padding: 8px 0;
-	padding-left: 25px;
-}
-
-#nexmoe-content .nexmoe-primary .nexmoe-page-nav {
-	border-radius: var(--radius);
-	text-align: center;
-	margin-top: 48px;
-	display: flex;
-}
-
-#nexmoe-content .nexmoe-primary .nexmoe-page-nav > * {
-	color: #999;
-	border-radius: 50%;
-	width: 36px;
-	height: 36px;
-	line-height: 36px;
-	margin-right: 8px;
-	background-color: #f5f6f5;
-}
-
 #nexmoe-content .nexmoe-post-footer {
 	background-color: transparent;
 }
