@@ -378,6 +378,12 @@ date: 2019-02-01 20:03:41
   "link": "https://wlcheng.cc",
   "img": "https://wlcheng.cc/images/avatar.png",
   "des": "来日方长，何惧车遥马慢"
+ },
+ {
+  "title": "碎言博客",
+  "link": "https://suiyan.cc/”,
+  "img": "https://suiyan.cc/assets/images/avatar.jpg",
+  "des": "编程、学习、记录"
  }
 ]
 {% endlinks %}
