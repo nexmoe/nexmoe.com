@@ -381,10 +381,34 @@ date: 2019-02-01 20:03:41
  },
  {
   "title": "碎言博客",
-  "link": "https://suiyan.cc/”,
+  "link": "https://suiyan.cc/",
   "img": "https://suiyan.cc/assets/images/avatar.jpg",
   "des": "编程、学习、记录"
- }
+ },
+ {
+  "title": "hawcat的时光轴",
+  "link": "https://hawcat.cn",
+  "img": "https://cdn.hawcat.cn/webAvatar/hawcat11673517380897901",
+  "des": "坚持记录~"
+  },
+  {
+"title": "饼藏的情敌",
+"link": "https://zjhzzy.github.io",
+"img": "https://q.qlogo.cn/g?b=qq&nk=822627809&s=640",
+"des": "在追求梦想的路上，坚持不懈"
+},
+{
+"title": "Zhuang Xfly",
+"link": "https://zxfly.site",
+"img": "https://zxfly.site/img/1.jpg",
+"des": "一位来自河北的高中生的博客"
+},
+{
+"title": "wututuのblog",
+"link": "https://blog.wututu.cn/",
+"img": "https://file-up.beaa.cn/blog/icon.jpg",
+"des": "wututu的博客,各种干货分享的博客"
+}
 ]
 {% endlinks %}
 
