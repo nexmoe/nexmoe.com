@@ -64,11 +64,6 @@ widgets:
                   - icon-github
                   - rgb(25, 23, 23)
                   - rgba(25, 23, 23, .1)
-              知乎:
-                  - https://www.zhihu.com/people/nexmoe
-                  - icon-zhihu
-                  - rgb(30, 136, 229)
-                  - rgba(30, 136, 229, .1)
               Twitter:
                   - https://twitter.com/nexmoe
                   - icon-twitter
