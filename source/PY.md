@@ -408,6 +408,12 @@ date: 2019-02-01 20:03:41
 "link": "https://blog.wututu.cn/",
 "img": "https://file-up.beaa.cn/blog/icon.jpg",
 "des": "wututu的博客,各种干货分享的博客"
+},
+{
+  "title": "寒叶的小站",
+  "link": "https://hanye.netlify.app",
+  "img": "https://avatars.githubusercontent.com/u/48580289?v=4",
+  "des": "充满好奇心的学生，不懈造梦的人。"
 }
 ]
 {% endlinks %}
