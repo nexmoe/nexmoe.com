@@ -414,7 +414,13 @@ date: 2019-02-01 20:03:41
   "link": "https://hanye.netlify.app",
   "img": "https://avatars.githubusercontent.com/u/48580289?v=4",
   "des": "充满好奇心的学生，不懈造梦的人。"
-}
+},
+{
+"title": "星萌亦派",
+"link": "https://meta-sns.com/",
+"img":"https://cravatar.cn/avatar/?d=https://pic.t1i.cc/lincoin.jpg",
+"des": "我坚持下去的，便是我想做的"
+ }
 ]
 {% endlinks %}
 
