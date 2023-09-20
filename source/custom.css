@@ -8,3 +8,7 @@ body {
 #nexmoe-content .nexmoe-post-footer {
 	background-color: transparent;
 }
+
+iframe {
+	width: 100%;
+}
