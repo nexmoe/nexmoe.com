@@ -57,6 +57,8 @@ exit /b
 
 ### Node(Nexmoe 使用的该方法)
 
+![](https://i.dawnlab.me/126036c1db438306d478d218435527cc.png)
+
 ```javascript
 const fs = require('fs');
 const path = require('path');
