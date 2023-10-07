@@ -2,6 +2,8 @@ Monitor Pro 是一个全面的资源监控工具，旨在帮助你实时跟踪�
 
 ## 安装使用
 
+安装后会自动启用该插件。
+
 <https://marketplace.visualstudio.com/items?itemName=nexmoe.monitor-pro>
 
 ## 屏幕截图
