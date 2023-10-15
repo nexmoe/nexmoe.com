@@ -46,9 +46,8 @@ future: true
 highlight:
   enable: true
   auto_detect: true
-  line_number: false
+  line_number: true
   wrap: true
-  tab_replace: '  '
   hljs: true
   
 # Home page setting
