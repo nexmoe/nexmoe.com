@@ -121,6 +121,10 @@ slotHead: |
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/atom-one-dark.min.css">
 
 slotFooter: |
+    <script
+        src="https://sentry.mixcm.com/js-sdk-loader/951847ece09614b80bd92b1de0265d0e.min.js"
+        crossorigin="anonymous"
+    ></script>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2058306854838448" crossorigin="anonymous"></script>
 
 # 自定义侧边栏尾部内容
