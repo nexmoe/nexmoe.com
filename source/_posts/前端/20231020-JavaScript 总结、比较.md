@@ -1,7 +1,49 @@
+## JS Class 中的 Static 是什么
+
+今天在看一个有关 JavaScript Class 的 Static 属性的文档，一开始看的英文版本，描述的比较难以理解，然后看中文版，翻译的也比较难以理解。
+
+英文
+
+> We can also assign a method to the class as a whole. Such methods are called static.
+
+中文
+
+> 我们可以把一个方法作为一个整体赋值给类。这样的方法被称为 静态的（static）。
+
+实际上 Static 的概念很简单。在 JavaScript 中，`static` 是一个关键字，用于定义类的静态方法或静态属性。静态方法和静态属性属于类本身，而不是类的实例。**这意味着它们可以直接通过类来调用，而无需实例化类。**
+
+静态方法是附加在类本身上的方法，而不是类的实例。它们通常用于执行与类相关的操作，而不依赖于类的实例状态。静态方法可以在类声明中使用 `static` 关键字进行定义，例如：
+
+```javascript
+class MyClass {
+  static staticMethod() {
+    console.log('This is a static method');
+  }
+}
+
+MyClass.staticMethod(); // 调用静态方法
+```
+
+在上面的例子中，`staticMethod()` 可以直接通过类 `MyClass` 来调用，而不需要创建 `MyClass` 的实例。静态方法在类的实例化过程中是不可继承的，它们只能由类本身调用。
+
+类的静态属性也是通过 `static` 关键字进行定义的，它们是类的共享属性，不属于类的实例。静态属性可以在类声明中直接定义。例如：
+
+```javascript
+class MyClass {
+  static staticProperty = 'This is a static property';
+}
+
+console.log(MyClass.staticProperty); // 访问静态属性
+```
+
+在上面的例子中，`staticProperty` 是一个静态属性，可以直接通过类 `MyClass` 来访问。静态属性在类的实例中是不可用的，它们只能通过类本身来访问。
+
+### 参考
+
+1. [Static properties and methods](https://javascript.info/static-properties-methods)
+2. [静态属性和静态方法](https://zh.javascript.info/static-properties-methods)
 
 ## 【总结比较】type 和 interface 的区别
-
-20231026
 
 在 TypeScript 中，`type`和`interface`是用来定义类型的关键字，它们有一些区别和特点。
 
@@ -12,9 +54,9 @@
 
 ### 不同点
 
-- `type`可以声明基本类型别名、联合类型、交叉类型等复杂类型，而`interface`只能用来描述对象结构的类型 [[1]](https://zhuanlan.zhihu.com/p/558315566)[[2]](https://juejin.cn/post/6844903749501059085)。
+- `type`可以声明基本类型别名、联合类型、交叉类型等复杂类型，而`interface`只能用来描述对象结构的类型 [[1]][https://zhuanlan.zhihu.com/p/558315566]([2)](https://juejin.cn/post/6844903749501059085)。
 - `type`可以使用`typeof`获取实例的类型进行赋值，而`interface`不支持 [[2]](https://juejin.cn/post/6844903749501059085)。
-- `interface`支持声明合并，可以将多个同名的接口进行合并，而`type`不支持声明合并 [[1]](https://zhuanlan.zhihu.com/p/558315566)[[2]](https://juejin.cn/post/6844903749501059085)。
+- `interface`支持声明合并，可以将多个同名的接口进行合并，而`type`不支持声明合并 [[1]][https://zhuanlan.zhihu.com/p/558315566]([2)](https://juejin.cn/post/6844903749501059085)。
 
 ### 总结
 
@@ -25,9 +67,8 @@
 
 - 元组类型是 TypeScript 中的一种特殊数据类型，与普通数组不同的是，元组中的每个元素可以具有不同的类型。
 
----
 
-参考：
+### 参考
 
 1. [TypeScript 中 type 和 interface 有什么区别？ - 知乎](https://zhuanlan.zhihu.com/p/558315566)
 2. [Typescript 中的 interface 和 type 到底有什么区别 - 掘金](https://juejin.cn/post/6844903749501059085)
@@ -36,8 +77,6 @@
 5. [元组 · TypeScript 入门教程](https://ts.xcatliu.com/advanced/tuple.html)
 
 ## 【总结】JavaScript 变量作用域和闭包
-
-20231020
 
 1. Lexical Environment
 
@@ -78,8 +117,6 @@
 
 ## 【总结】async 和 await 使用时的注意点
 
-20231012
-
 1. 使用`await`命令时，最好将其放在`try...catch`代码块中处理可能的`rejected`结果，或者使用`catch()`方法捕获错误。
 2. 多个`await`命令后面的异步操作如果互不依赖，应该同时触发，可以使用`Promise.all()`方法或者使用多个变量并行赋值的方式。
 3. `await`命令只能在`async`函数中使用，如果在普通函数中使用会报错。如果在普通函数中使用`await`，可能会导致异步操作并发执行而不是继发执行，正确的做法是使用`for`循环或者`reduce()`方法。
@@ -92,8 +129,6 @@
 - [await - JavaScript | MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/await)
 
 ## 【总结比较】遍历语法的比较
-
-20231008
 
 - 最原始的遍历方法是使用`for`循环，但这种写法相对繁琐。
 - 数组提供了内置的`forEach`方法，可以简化遍历操作，但无法中途跳出循环。
