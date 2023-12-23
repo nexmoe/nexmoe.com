@@ -445,8 +445,7 @@ date: 2019-02-01 20:03:41
         "link": "https://blog.dominickk.top/",
         "img": "http://dominickk.oss-cn-hangzhou.aliyuncs.com/typora/2023/11/dominic.jpg",
         "des": "写文档使我快乐🍺"
-    },
-
+    }
 ]
 {% endlinks %}
 
