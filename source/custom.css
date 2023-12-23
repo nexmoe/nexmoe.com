@@ -12,3 +12,7 @@ body {
 iframe {
 	width: 100%!important;
 }
+
+article ul li {
+    line-height: 1.5rem;
+}
