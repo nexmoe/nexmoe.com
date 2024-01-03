@@ -1,0 +1,11 @@
+## Git 如何找到被猪队友删掉的某行
+
+如果你知道该行的内容，你可以这样
+
+```shell
+git log -S <string> path/to/file
+```
+
+### 参考
+
+1. [How do I &quot;git blame&quot; a deleted line?](https://stackoverflow.com/questions/4404444/how-do-i-git-blame-a-deleted-line)
