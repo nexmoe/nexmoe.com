@@ -445,6 +445,12 @@ date: 2019-02-01 20:03:41
         "link": "https://blog.dominickk.top/",
         "img": "http://dominickk.oss-cn-hangzhou.aliyuncs.com/typora/2023/11/dominic.jpg",
         "des": "写文档使我快乐🍺"
+    },
+    {
+        "title": "ZL Asica",
+        "link": "https://www.zl-asica.com/",
+        "img": "https://cdn.v2ex.com/gravatar/cba8b28739dd6225f6fe961762bdb0b71b858d68c83d946a37cee3b0e0daece5?size=512",
+        "des": "不要哭，不要笑，不要恨，要理解。"
     }
 ]
 {% endlinks %}
