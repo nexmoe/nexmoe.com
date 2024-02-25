@@ -451,6 +451,12 @@ date: 2019-02-01 20:03:41
         "link": "https://www.zl-asica.com/",
         "img": "https://cdn.v2ex.com/gravatar/cba8b28739dd6225f6fe961762bdb0b71b858d68c83d946a37cee3b0e0daece5?size=512",
         "des": "不要哭，不要笑，不要恨，要理解。"
+    },
+    {
+        "title": "Magren's Blog",
+        "link": "https://magren.cc",
+        "img": "https://magren.cc/avatar.png",
+        "des": "不为繁华易匠心"
     }
 ]
 {% endlinks %}
