@@ -1,80 +1,135 @@
-我们将在此文章中探索如何使用 Docker 包装一个 Nuxt.js 的全栈项目，同时关注优化镜像大小，并使用了 pnpm 作为包管理器。
+本文将指导你如何为一个结合了 Prisma 和 Nuxt.js 的全栈项目创建优化后的 Docker 镜像，并使用 pnpm 作为包管理器。
+
+我的项目最终镜像大小从 1.12GB 缩减到了 160.21MB。
 
 ## 我的项目构成
+
+Nuxt.js 是一个基于 Vue.js 的服务器端渲染应用框架，非常适合于构建现代化的 Web 应用。
+
+我的项目直接采用 Nuxt 构建全栈项目。
 
 - Nuxt3
 - Prisma
 - PNPM
 
-首先，我们需要编写一个 `Dockerfile`，这是一个文本文档，包含了用于自动构建 Docker 镜像的所有命令。Nuxt.js 是一个基于 Vue.js 的服务器端渲染应用框架，非常适合于构建现代化的 web 应用。
+## 开始构建
 
-为了保持构建后镜像的精简，我们将采取多阶段构建策略，并且选择了较小的基础镜像 `node:20-slim`。
+首先，我们将使用 `node:20-alpine` 这个更轻量级的基础镜像来减小最终镜像的大小。Alpine Linux 因其安全、简单且体积小而广受欢迎。
+
+多阶段构建是减少 Docker 镜像大小的有效策略之一。我们将使用三个阶段来构建我们的镜像。
+
+### 第一阶段：构建依赖项
+
+```Dockerfile
+`FROM node:20-alpine AS dependency-base
+
+WORKDIR /app
+
+RUN npm install -g pnpm
+
+COPY package.json pnpm-lock.yaml ./
+
+RUN pnpm install --frozen-lockfile` 
+```
+
+这一阶段负责安装我们项目的依赖项。我们使用了 pnpm 来代替 npm，pnpm 在缓存和磁盘使用上更为高效。
+
+大部分项目也用 pnpm 而不是 npm 作为包管理工具了。
+
+### 第二阶段：构建应用程序
+
+```Dockerfile
+FROM dependency-base AS production-base
+
+COPY . .
+
+RUN pnpm run build 
+```
+
+在这一阶段，我们复制了项目代码并执行构建命令。这里的构建指的是 Nuxt.js 的构建过程，它会生成静态文件和服务器端渲染所需的资源。
+
+### 第三阶段：生成生产镜像
+
+```Dockerfile
+`FROM node:20-alpine AS production
+
+COPY --from=production-base /app/.output /app/.output
+
+ENV NUXT_HOST=0.0.0.0 \
+    NUXT_APP_VERSION=latest \
+    DATABASE_URL=file:./db.sqlite \
+    NODE_ENV=production
+
+WORKDIR /app
+
+EXPOSE 3000
+
+CMD ["node", "/app/.output/server/index.mjs"]` 
+```
+
+最后，我们创建了适用于生产环境的镜像。这个镜像仅包含用于运行应用程序的必要文件，减少了不必要的层，使得镜像尽可能地保持精简。
+
+我们还定义了一些环境变量，比如 `NUXT_HOST` 和 `DATABASE_URL`，这些是 Nuxt.js 应用和 Prisma 所需要的。其中，`DATABASE_URL` 被设置为使用项目根目录下的 SQLite 文件作为数据库。
+
+最终通过暴露端口 `3000` 并指定启动命令来运行 Nuxt.js 应用程序。
+
+## 不同构建方式的镜像大小比较
+
+分别为：
+
+- 3 步构建
+- 2 步构建
+- 直接构建
+
+![a3c345aaa51a4b8b802c25bc9d3591c0.png](https://i.dawnlab.me/a3c345aaa51a4b8b802c25bc9d3591c0.png)
 
 ## Dockerfile 总览
 
-在多阶段构建中
-
-- 第一阶段是'构建器'（builder），它负责安装依赖项和编译应用。
-- 第二阶段是'生产'（production），它负责设置运行环境并运行编译后的应用。
-
-以下是针对 Nuxt.js 应用的 Dockerfile 示例：
-
 ```Dockerfile
-`# 使用较小的基础镜像
-ARG NODE_VERSION=node:20-slim
+# Use a smaller base image
+ARG NODE_VERSION=node:20-alpine
 
-# 第一阶段：构建应用
-FROM $NODE_VERSION AS builder
+# Stage 1: Build dependencies
+FROM $NODE_VERSION AS dependency-base
 
+# Create app directory
 WORKDIR /app
 
-# 安装 pnpm
+# Install pnpm
 RUN npm install -g pnpm
 
-# 仅拷贝 package 文件
+# Copy the package files
 COPY package.json pnpm-lock.yaml ./
 
-# 使用 pnpm 安装依赖
+# Install dependencies using pnpm
 RUN pnpm install --frozen-lockfile
 
-# 拷贝应用的其余源代码
+# Stage 2: Build the application
+FROM dependency-base AS production-base
+
+# Copy the source code
 COPY . .
 
-# 构建应用
+# Build the application
 RUN pnpm run build
 
-# 清理不需要的文件以减小镜像大小
-RUN pnpm prune --production
-
-# 第二阶段：创建最终的生产镜像
+# Stage 3: Production image
 FROM $NODE_VERSION AS production
 
+# Copy built assets from previous stage
+COPY --from=production-base /app/.output /app/.output
+
+# Define environment variables
+ENV NUXT_HOST=0.0.0.0 \
+    NUXT_APP_VERSION=latest \
+    DATABASE_URL=file:./db.sqlite \
+    NODE_ENV=production
+
+# Set the working directory
 WORKDIR /app
 
-# 设置环境变量
-ENV NUXT_HOST=0.0.0.0
-ARG NUXT_APP_VERSION
-ENV NUXT_APP_VERSION=${NUXT_APP_VERSION}
-ENV DATABASE_URL=file:./db.sqlite
-ENV NODE_ENV=production
-
-# 从构建器阶段拷贝构建好的资源和 node_modules 到生产阶段
-COPY --from=builder /app/.output ./.output
-COPY --from=builder /app/node_modules ./node_modules
-
-# 暴露端口 3000
 EXPOSE 3000
 
-# 启动应用
-CMD [ "node", "./.output/server/index.mjs" ]` 
+# Start the app
+CMD ["node", "/app/.output/server/index.mjs"]
 ```
-
-## 优化镜像大小
-
-在这个 Dockerfile 中，我们使用了多阶段构建来优化最终镜像的大小。在构建阶段，我们首先安装了 pnpm 并仅拷贝了所需的 package 文件，然后进行安装依赖并构建源代码。完成后，我们执行了 `pnpm prune --production` 以移除开发依赖项，减小镜像大小。
-
-在最终的生产镜像中，我们基于同样的精简基础镜像，并只从构建阶段拷贝必要的产物，比如已编译的 .output 目录和 node\_modules 文件夹，这使得生产镜像尽可能地轻量。
-
-![93b559433eb57d0545d65675a3d5d915.png](https://i.dawnlab.me/93b559433eb57d0545d65675a3d5d915.png)
-
-这个结果并不是最优结果，后续会继续优化。
