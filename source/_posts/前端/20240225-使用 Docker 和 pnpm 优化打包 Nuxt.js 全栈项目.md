@@ -21,7 +21,7 @@ Nuxt.js 是一个基于 Vue.js 的服务器端渲染应用框架，非常适合�
 ### 第一阶段：构建依赖项
 
 ```Dockerfile
-`FROM node:20-alpine AS dependency-base
+FROM node:20-alpine AS dependency-base
 
 WORKDIR /app
 
