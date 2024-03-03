@@ -20,7 +20,7 @@ Nuxt.js 是一个基于 Vue.js 的服务器端渲染应用框架，非常适合�
 
 ### 第一阶段：构建依赖项
 
-```Dockerfile
+```docker
 ARG NODE_VERSION=node:20-alpine
 
 FROM $NODE_VERSION AS dependency-base
@@ -31,7 +31,7 @@ RUN npm install -g pnpm
 
 COPY package.json pnpm-lock.yaml ./
 
-RUN pnpm install --frozen-lockfile` 
+RUN pnpm install --frozen-lockfile`
 ```
 
 这一阶段负责安装我们项目的依赖项。我们使用了 pnpm 来代替 npm，pnpm 在缓存和磁盘使用上更为高效。
@@ -40,7 +40,7 @@ RUN pnpm install --frozen-lockfile`
 
 ### 第二阶段：构建应用程序
 
-```Dockerfile
+```docker
 FROM dependency-base AS production-base
 
 COPY . .
@@ -52,7 +52,7 @@ RUN pnpm run build
 
 ### 第三阶段：生成生产镜像
 
-```Dockerfile
+```docker
 FROM $NODE_VERSION AS production
 
 COPY --from=production-base /app/.output /app/.output
@@ -66,7 +66,7 @@ WORKDIR /app
 
 EXPOSE 3000
 
-CMD ["node", "/app/.output/server/index.mjs"]` 
+CMD ["node", "/app/.output/server/index.mjs"]
 ```
 
 最后，我们创建了适用于生产环境的镜像。这个镜像仅包含用于运行应用程序的必要文件，减少了不必要的层，使得镜像尽可能地保持精简。
@@ -87,7 +87,7 @@ CMD ["node", "/app/.output/server/index.mjs"]`
 
 ## Dockerfile 总览
 
-```Dockerfile
+```docker
 # Use a smaller base image
 ARG NODE_VERSION=node:20-alpine
 

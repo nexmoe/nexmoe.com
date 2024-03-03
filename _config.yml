@@ -43,12 +43,14 @@ post_asset_folder: true
 relative_link: false
 future: true
 
+# syntax highlighter
+shiki:
+  theme: github-dark
+  line_number: true # whether to show the line_number
 highlight:
-  enable: true
-  auto_detect: true
-  line_number: true
-  wrap: true
-  hljs: true
+  enable: false
+prismjs:
+  enable: false
   
 # Home page setting
 # path: Root path for your blogs index page. (default = '')
