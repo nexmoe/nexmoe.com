@@ -457,6 +457,12 @@ date: 2019-02-01 20:03:41
         "link": "https://magren.cc",
         "img": "https://magren.cc/avatar.png",
         "des": "不为繁华易匠心"
+    },
+    {
+        "title": "Cesirdy",
+        "link": "https://csd.pub",
+        "img": "https://gravatar.loli.net/avatar/31046ac65fce86051137514c386326f0?size=200",
+        "des": "随便写点东西。"
     }
 ]
 {% endlinks %}
@@ -483,11 +489,6 @@ date: 2019-02-01 20:03:41
   "title": "卷卷有空格",
   "link": "http://blog.jinkunchen.com/",
   "img": "https://ws1.sinaimg.cn/large/006pSa7Qgw1fbrbn4gkk1j30hs0hsgm9.jpg"
- },
- {
-  "title": "蔡锶铎",
-  "link": "https://idiot.moe/",
-  "img": "https://ws1.sinaimg.cn/large/a15b4afegy1fd3yir3bo0j20b40b43ya.jpg"
  },
  {
   "title": "不才博客",
