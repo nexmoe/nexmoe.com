@@ -11,17 +11,16 @@ date: 2016-08-20
 
 ## 我是谁
 
-我是折影轻梦（Nexmoe）
+我是折影轻梦，英文名 Nexmoe，是创作者、开发者。
 
-## 作品
+小舒同学 20k MAU 👉 [小舒同学 | 基于收藏夹的新标签页](https://xiaoshuapp.com/)
+探索者小舒 7k MAU 👉 [探索者小舒 | 强大快捷的侧栏搜索切换工具](https://xiaoshuapp.com/explorer)
+Hexo Theme Nexmoe 👉 [Hexo Theme Nexmoe | 🔥 一个比较特别的 Hexo 主题](https://docs.nexmoe.com/)
 
-<script src="https://store.chainwon.com/client.js"
-data-id="63908420e127c076e239"
-data-spacing="24"
-data-offset="24"
-        async></script>
+## 导航
 
-## 其他
+个人主页，收集了关于我的一切，实时更新 👉 [Nexmoe](https://i.nexmoe.com/)
 
-- [听音乐 - 网易云音乐](https://music.163.com/#/user/home?id=129387613)
-- [看书、电影 - 豆瓣](https://www.douban.com/people/nexmoe/)
+简述了人生心路历程 👉 [人生大事](https://nexmoe.com/line.html)
+
+截图，过去做的一些乱七八糟的东西，只有一部分截图保存了下来 👉 [截图 | Nexmoe](https://i.nexmoe.com/flow/e5670f17-d948-4575-a488-4c1578373474)
