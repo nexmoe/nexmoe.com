@@ -72,17 +72,37 @@ docker-compose up -d
 
 ## Windows 客户端配置
 
-1. 首先去 ZeroTier 官网下载一个 ZeroTier 客户端
+### 下载
 
-2. 将服务器中 ./data/zerotier/dist 目录下 planet 文件覆盖粘贴到自己电脑的 `C:\ProgramData\ZeroTier\One` 中！[16b4f746c777faf281bfa6bf04d60365.png](https://i.dawnlab.me/16b4f746c777faf281bfa6bf04d60365.png)
+首先去 ZeroTier 官网下载一个 ZeroTier 客户端
 
-3. Win+S 搜索 “服务”，打开 “服务”，找到 ZeroTier One，并且重启服务！[14bf0b688b1cbb9fb1525b66d68de414.png](https://i.dawnlab.me/14bf0b688b1cbb9fb1525b66d68de414.png)
+### 覆盖 planet 文件
 
-4. 加入网络，在后台找到 ID，和平常使用 ZeroTier 加入网络的操作一样。
+将服务器中 ./data/zerotier/dist 目录下 planet 文件覆盖粘贴到自己电脑的 `C:\ProgramData\ZeroTier\One` 中
 
-5. 授权访问：在 ZeroTier 控制器的管理后台，找到新加的客户端并授权其访问。![ba3580778567b5048dafedd2140ef540.png](https://i.dawnlab.me/ba3580778567b5048dafedd2140ef540.png)
+![覆盖 planet 文件.png](https://i.dawnlab.me/16b4f746c777faf281bfa6bf04d60365.png)
 
-6. 连通验证，马赛克处为你的公网 IP![bd952a5f1c0a915cd2b14128ec018783.png](https://i.dawnlab.me/bd952a5f1c0a915cd2b14128ec018783.png)
+### 重启服务
+
+Win+S 搜索 “服务”，打开 “服务”，找到 ZeroTier One，并且重启服务
+
+![重启服务](https://i.dawnlab.me/14bf0b688b1cbb9fb1525b66d68de414.png)
+
+### 加入网络
+
+在后台找到 ID，和平常使用 ZeroTier 加入网络的操作一样。
+
+### 授权访问
+
+在 ZeroTier 控制器的管理后台，找到新加的客户端并授权其访问。
+
+![授权访问.png](https://i.dawnlab.me/ba3580778567b5048dafedd2140ef540.png)
+
+### 连通验证
+
+马赛克处为你的公网 IP
+
+![连通验证.png](https://i.dawnlab.me/bd952a5f1c0a915cd2b14128ec018783.png)
 
 ## 其他客户端
 
