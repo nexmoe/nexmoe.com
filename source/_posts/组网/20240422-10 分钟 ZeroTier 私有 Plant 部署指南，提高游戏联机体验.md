@@ -72,11 +72,11 @@ docker-compose up -d
 
 ## Windows 客户端配置
 
-1. 首先去 zerotier 官网下载一个 zerotier 客户端
+1. 首先去 ZeroTier 官网下载一个 ZeroTier 客户端
 
-2. 将服务器中 ./data/zerotier/dist 目录下 planet 文件覆盖粘贴到自己电脑的 `C:\ProgramData\ZeroTier\One` 中![16b4f746c777faf281bfa6bf04d60365.png](https://i.dawnlab.me/16b4f746c777faf281bfa6bf04d60365.png)
+2. 将服务器中 ./data/zerotier/dist 目录下 planet 文件覆盖粘贴到自己电脑的 `C:\ProgramData\ZeroTier\One` 中！[16b4f746c777faf281bfa6bf04d60365.png](https://i.dawnlab.me/16b4f746c777faf281bfa6bf04d60365.png)
 
-3. Win+S 搜索 “服务”，打开 “服务”，找到 ZeroTier One，并且重启服务![14bf0b688b1cbb9fb1525b66d68de414.png](https://i.dawnlab.me/14bf0b688b1cbb9fb1525b66d68de414.png)
+3. Win+S 搜索 “服务”，打开 “服务”，找到 ZeroTier One，并且重启服务！[14bf0b688b1cbb9fb1525b66d68de414.png](https://i.dawnlab.me/14bf0b688b1cbb9fb1525b66d68de414.png)
 
 4. 加入网络，在后台找到 ID，和平常使用 ZeroTier 加入网络的操作一样。
 
