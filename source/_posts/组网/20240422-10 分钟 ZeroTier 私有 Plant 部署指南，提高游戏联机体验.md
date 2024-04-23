@@ -27,7 +27,7 @@ ZeroTier 的核心组件包括 PLANET、MOON 和 LEAF，分别代表根服务器
 新建 docker-compose.yml 文件，插入下面内容，
 记得修改下面中的 `IPV4IP ADDRESS` 为你的公网 IP 地址。
 
-```docker
+```yml
 version: '3'
 
 services:
