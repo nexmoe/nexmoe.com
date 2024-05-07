@@ -464,6 +464,12 @@ date: 2019-02-01 20:03:41
         "img": "https://gravatar.loli.net/avatar/31046ac65fce86051137514c386326f0?size=200",
         "des": "随便写点东西。"
     }
+    {
+        "title": "zfsjlll的自留地",
+        "link": "https://blog.002724.xyz/",
+        "img": "https://cdn.statically.io/gh/conquer1the2world3/zfsjlll-blog@main/Pictures/1684813133593.42n2d7xmqns0.webp",
+        "des": "趁着年轻，好好犯病"
+    }
 ]
 {% endlinks %}
 
