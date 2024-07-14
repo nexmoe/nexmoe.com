@@ -1,4 +1,6 @@
 
+![](https://i.dawnlab.me/f4994d4cc1b09a7c8429191762d6c085.png)
+
 ## 快速开始
 
 在使用 VSCode 的过程中，你可以通过使用 Remote-SSH 插件来连接到远程服务器，然后使用 Monitor Pro 插件对远程服务器的资源进行监控。
