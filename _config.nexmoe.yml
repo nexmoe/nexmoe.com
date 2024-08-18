@@ -1,6 +1,6 @@
 avatar: https://unavatar.io/nexmoe?ttl=21 # 网站 Logo
 background: # 既是博客的背景，又是文章默认头图
-    path: https://dogefs.s3.ladydaily.com/~/source/unsplash/photo-1559251606-c623743a6d76?ixid=MnwxMjA3fDB8MXxzZWFyY2h8MTN8fHBpbmt8ZW58MHx8fHwxNjYzMDQ0Nzc2&ixlib=rb-1.2.1&w=1920
+    path: https://images.unsplash.com/photo-1559251606-c623743a6d76?ixid=MnwxMjA3fDB8MXxzZWFyY2h8MTN8fHBpbmt8ZW58MHx8fHwxNjYzMDQ0Nzc2&ixlib=rb-1.2.1&w=1920
 favicon:
     href: https://unavatar.io/nexmoe?ttl=21 # 网站图标
     type: image/png # 图标类型，可能的值有(image/png, image/vnd.microsoft.icon, image/x-icon, image/gif)
