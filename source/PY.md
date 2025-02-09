@@ -53,8 +53,8 @@ date: 2019-02-01 20:03:41
         "img":"https://avatars.githubusercontent.com/u/8266075?v=4"
     },
     {
-        "title":"Jrotty",
-        "link":"https://zezeshe.com/",
+        "title":"泽泽社长",
+        "link":"https://91ntr.cn/",
         "img":"https://thirdqq.qlogo.cn/g?b=sdk&k=0n5AZ9Ne4h3em8iboKu3sHg&s=100&t=1556021799"
     },
     {
